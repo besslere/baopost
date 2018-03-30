@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+<!-- 1.1.0 -->
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="keywords" content="快邮，速递，快邮速递">
+    <meta name="description" content="快邮速递是快邮科技旗下新型快递品牌，以“服务大众，畅享速递”为宗旨，为用户提供“方便、快递”的服务体验">
+    <title>快邮速递-包裹查询</title>
+    <meta name="author" content="ZouYuan" />
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+
+    <nav class="navbar navbar-fixed-top" >
+        <div class="container">
+            <div class="col-md-12">
+                <nav class="navbar pull-right  hidden-xs" role="navigation">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i></i>
+                                    简体中文
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">English</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-12">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="" class="img-responsive"/>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="index.html">首页</a></li>
+                        <li class="active"><a href="track.html">包裹查询</a></li>
+                        <li><a href="channel.html">渠道查询</a></li>
+                        <li><a href="price.html">价格查询</a></li>
+                        <li><a href="product.html">产品服务</a></li>
+                        <li><a href="news.html">新闻中心</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="login.html">登录/注册</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="track">
+        <div class="container">
+            <div class="col-md-2">
+                <div class="track-num">
+                    <textarea class="form-control" rows="10" placeholder="每行输入一个单号，最多只允许提交40个单号"></textarea>
+                    <button class="btn btn-green form-control" title="请输入单号查询。">查 询</button>
+                </div>
+                <div class="track-step">
+                    <ul>
+                        <li>
+                            <img src="img/hour24.png" alt="24小时自助下单" title="24小时自助下单"/>
+                            <p>24小时自助下单</p>
+                        </li>
+                        <li>
+                            <img src="img/pay_online.png" alt="线上支付自动出单" title="线上支付自动出单"/>
+                            <p>线上支付自动出单</p>
+                        </li>
+                        <li>
+                            <img src="img/packaging.png" alt="打包取件一目了然" title="打包取件一目了然"/>
+                            <p>打包取件一目了然</p>
+                        </li>
+                        <li>
+                            <img src="img/sending.png" alt="客户包裹发往国外" title="客户包裹发往国外"/>
+                            <p>客户包裹发往国外</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="track-info">
+                    <ul id="myTab" class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#all" data-toggle="tab">
+                               <i class="glyphicon glyphicon-th-list"></i> 所有 <span>(3)</span>
+                            </a>
+                        </li>
+                        <li><a href="#none" data-toggle="tab"><i class="glyphicon glyphicon-remove"></i> 查询不到<span>(0)</span></a></li>
+                        <li><a href="#success" data-toggle="tab"><i class="glyphicon glyphicon-ok"></i> 成功签收<span>(3)</span></a></li>
+                        <li><a href="#question" data-toggle="tab"><i class="glyphicon glyphicon-exclamation-sign"></i> 运输异常<span>(0)</span></a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade in active" id="all">
+                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingOne">
+                                        <div class="panel-title">
+                                            <div class="media pull-left col-md-4 col-xs-12">
+                                                <div class="media-left">
+                                                    <img src="img/true.png" alt="true"/>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">
+                                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                            4202087892748927005100000000001018
+                                                        </a>
+                                                    </h4>
+                                                    <b>shipping</b>
+                                                </div>
+                                            </div>
+                                            <div class="track-city pull-left col-md-2 col-xs-12">
+                                                <div class="track-df track-cf">
+                                                    <span>中国</span>
+                                                    <i>CN</i>
+                                                </div>
+                                                <div class="track-return"></div>
+                                                <div class="track-df track-md">
+                                                    <span>瑞士</span>
+                                                    <i>SP</i>
+                                                </div>
+                                            </div>
+                                            <div class="track-date pull-right col-md-6 col-xs-12">
+                                                <p>2018-02-09 03:11 Unloaded from arrival flight CX08408 Feb</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="panel-body">
+                                            <div class="track-ctn">
+                                                <h5>最新路线明细：</h5>
+                                                <div class="rote active">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-30 19:10:01</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Вручен</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-30 16:33:37</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Выдан на доставку(准备交货)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-29 11:25:24</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Принят на склад доставки(货运仓库已接受)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:50:22</span>
+                                                    <span>Москва(莫斯科) , Возвращен на склад транзита(返回中转仓库)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:49:11</span>
+                                                    <span>Москва(莫斯科) , Выдан на отправку в г-транзите(已发往中转城市)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:49:11</span>
+                                                    <span>Москва(莫斯科) , Принят на склад транзита(中转库房已接收)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:54</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Отправлен в г-транзит(在中转城市已发送)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:53</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Сдан перевозчику в г-транзите(中转城市承运人已办理)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:51</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Выдан на отправку в г-транзите(已发往中转城市)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-12 14:59:15</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Принят на склад транзита(货物进行分拣中)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-12 14:46:50</span>
+                                                    <span>Хумень , Создан(海关报关信息已发送)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <span>2017-06-12 14:46:41</span>
+                                                    <span>Хумень , Создан(已办理入库)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                        <div class="panel-title">
+                                            <div class="media pull-left col-md-4 col-xs-12">
+                                                <div class="media-left">
+                                                    <img src="img/true.png" alt="true"/>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">
+                                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                            4202087892748927005100000000001018
+                                                        </a>
+                                                    </h4>
+                                                    <b>shipping</b>
+                                                </div>
+                                            </div>
+                                            <div class="track-city pull-left col-md-2 col-xs-12">
+                                                <div class="track-df track-cf">
+                                                    <span>中国</span>
+                                                    <i>CN</i>
+                                                </div>
+                                                <div class="track-return"></div>
+                                                <div class="track-df track-md">
+                                                    <span>韩国</span>
+                                                    <i>KP</i>
+                                                </div>
+                                            </div>
+                                            <div class="track-date pull-right col-md-6 col-xs-12">
+                                                <p>2018-02-09 03:11 Unloaded from arrival flight CX08408 Feb</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                        <div class="panel-body">
+                                            <div class="track-ctn">
+                                                <h5>最新路线明细：</h5>
+                                                <div class="rote active">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-30 19:10:01</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Вручен</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-30 16:33:37</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Выдан на доставку(准备交货)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-29 11:25:24</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Принят на склад доставки(货运仓库已接受)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:50:22</span>
+                                                    <span>Москва(莫斯科 ) , Возвращен на склад транзита(返回中转仓库)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:49:11</span>
+                                                    <span>Москва(莫斯科 ) , Выдан на отправку в г-транзите(已发往中转城市)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:49:11</span>
+                                                    <span>Москва(莫斯科 ) , Принят на склад транзита(中转库房已接收)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:54</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Отправлен в г-транзит(在中转城市已发送)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:53</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Сдан перевозчику в г-транзите(中转城市承运人已办理)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:51</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Выдан на отправку в г-транзите(已发往中转城市)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-12 14:59:15</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Принят на склад транзита(货物进行分拣中)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-12 14:46:50</span>
+                                                    <span>Хумень , Создан(海关报关信息已发送)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <span>2017-06-12 14:46:41</span>
+                                                    <span>Хумень , Создан(已办理入库)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingThree">
+                                        <div class="panel-title">
+                                            <div class="media pull-left col-md-4 col-xs-12">
+                                                <div class="media-left">
+                                                    <img src="img/true.png" alt="true"/>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">
+                                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                            4202087892748927005100000000001018
+                                                        </a>
+                                                    </h4>
+                                                    <b>shipping</b>
+                                                </div>
+                                            </div>
+                                            <div class="track-city pull-left col-md-2 col-xs-12">
+                                                <div class="track-df track-cf">
+                                                    <span>中国</span>
+                                                    <i>CN</i>
+                                                </div>
+                                                <div class="track-return"></div>
+                                                <div class="track-df track-md">
+                                                    <span>美国</span>
+                                                    <i>US</i>
+                                                </div>
+                                            </div>
+                                            <div class="track-date pull-right col-md-6 col-xs-12">
+                                                <p>2018-02-09 03:11 Unloaded from arrival flight CX08408 Feb</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="panel-body">
+                                            <div class="track-ctn">
+                                                <h5>最新路线明细：</h5>
+                                                <div class="rote active">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-30 19:10:01</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Вручен</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-30 16:33:37</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Выдан на доставку(准备交货)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-29 11:25:24</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Принят на склад доставки(货运仓库已接受)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:50:22</span>
+                                                    <span>Москва(莫斯科 ) , Возвращен на склад транзита(返回中转仓库)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:49:11</span>
+                                                    <span>Москва(莫斯科 ) , Выдан на отправку в г-транзите(已发往中转城市)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:49:11</span>
+                                                    <span>Москва(莫斯科 ) , Принят на склад транзита(中转库房已接收)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:54</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Отправлен в г-транзит(在中转城市已发送)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:53</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Сдан перевозчику в г-транзите(中转城市承运人已办理)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:51</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Выдан на отправку в г-транзите(已发往中转城市)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-12 14:59:15</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Принят на склад транзита(货物进行分拣中)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-12 14:46:50</span>
+                                                    <span>Хумень , Создан(海关报关信息已发送)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <span>2017-06-12 14:46:41</span>
+                                                    <span>Хумень , Создан(已办理入库)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="none">
+                            <p class="dh">没有查询到单号。</p>
+                            <div class="kbox">
+                                <img src="img/box.png" alt="没有查询到单号" title="没有查询到单号"/>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="success">
+                            <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingOne1">
+                                        <div class="panel-title">
+                                            <div class="media pull-left col-md-4 col-xs-12">
+                                                <div class="media-left">
+                                                    <img src="img/true.png" alt="true"/>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">
+                                                        <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                                            4202087892748927005100000000001018
+                                                        </a>
+                                                    </h4>
+                                                    <b>shipping</b>
+                                                </div>
+                                            </div>
+                                            <div class="track-city pull-left col-md-2 col-xs-12">
+                                                <div class="track-df track-cf">
+                                                    <span>中国</span>
+                                                    <i>CN</i>
+                                                </div>
+                                                <div class="track-return"></div>
+                                                <div class="track-df track-md">
+                                                    <span>瑞士</span>
+                                                    <i>SP</i>
+                                                </div>
+                                            </div>
+                                            <div class="track-date pull-right col-md-6 col-xs-12">
+                                                <p>2018-02-09 03:11 Unloaded from arrival flight CX08408 Feb</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne1">
+                                        <div class="panel-body">
+                                            <div class="track-ctn">
+                                                <h5>最新路线明细：</h5>
+                                                <div class="rote active">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-30 19:10:01</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Вручен</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-30 16:33:37</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Выдан на доставку(准备交货)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-29 11:25:24</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Принят на склад доставки(货运仓库已接受)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:50:22</span>
+                                                    <span>Москва(莫斯科 ) , Возвращен на склад транзита(返回中转仓库)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:49:11</span>
+                                                    <span>Москва(莫斯科 ) , Выдан на отправку в г-транзите(已发往中转城市)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:49:11</span>
+                                                    <span>Москва(莫斯科 ) , Принят на склад транзита(中转库房已接收)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:54</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Отправлен в г-транзит(在中转城市已发送)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:53</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Сдан перевозчику в г-транзите(中转城市承运人已办理)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:51</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Выдан на отправку в г-транзите(已发往中转城市)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-12 14:59:15</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Принят на склад транзита(货物进行分拣中)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-12 14:46:50</span>
+                                                    <span>Хумень , Создан(海关报关信息已发送)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <span>2017-06-12 14:46:41</span>
+                                                    <span>Хумень , Создан(已办理入库)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingTwo1">
+                                        <div class="panel-title">
+                                            <div class="media pull-left col-md-4 col-xs-12">
+                                                <div class="media-left">
+                                                    <img src="img/true.png" alt="true"/>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">
+                                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+                                                            4202087892748927005100000000001018
+                                                        </a>
+                                                    </h4>
+                                                    <b>shipping</b>
+                                                </div>
+                                            </div>
+                                            <div class="track-city pull-left col-md-2 col-xs-12">
+                                                <div class="track-df track-cf">
+                                                    <span>中国</span>
+                                                    <i>CN</i>
+                                                </div>
+                                                <div class="track-return"></div>
+                                                <div class="track-df track-md">
+                                                    <span>韩国</span>
+                                                    <i>KP</i>
+                                                </div>
+                                            </div>
+                                            <div class="track-date pull-right col-md-6 col-xs-12">
+                                                <p>2018-02-09 03:11 Unloaded from arrival flight CX08408 Feb</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="collapseTwo1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo1">
+                                        <div class="panel-body">
+                                            <div class="track-ctn">
+                                                <h5>最新路线明细：</h5>
+                                                <div class="rote active">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-30 19:10:01</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Вручен</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-30 16:33:37</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Выдан на доставку(准备交货)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-29 11:25:24</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Принят на склад доставки(货运仓库已接受)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:50:22</span>
+                                                    <span>Москва(莫斯科 ) , Возвращен на склад транзита(返回中转仓库)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:49:11</span>
+                                                    <span>Москва(莫斯科 ) , Выдан на отправку в г-транзите(已发往中转城市)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:49:11</span>
+                                                    <span>Москва(莫斯科 ) , Принят на склад транзита(中转库房已接收)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:54</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Отправлен в г-транзит(在中转城市已发送)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:53</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Сдан перевозчику в г-транзите(中转城市承运人已办理)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:51</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Выдан на отправку в г-транзите(已发往中转城市)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-12 14:59:15</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Принят на склад транзита(货物进行分拣中)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-12 14:46:50</span>
+                                                    <span>Хумень , Создан(海关报关信息已发送)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <span>2017-06-12 14:46:41</span>
+                                                    <span>Хумень , Создан(已办理入库)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingThree1">
+                                        <div class="panel-title">
+                                            <div class="media pull-left col-md-4 col-xs-12">
+                                                <div class="media-left">
+                                                    <img src="img/true.png" alt="true"/>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">
+                                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+                                                            4202087892748927005100000000001018
+                                                        </a>
+                                                    </h4>
+                                                    <b>shipping</b>
+                                                </div>
+                                            </div>
+                                            <div class="track-city pull-left col-md-2 col-xs-12">
+                                                <div class="track-df track-cf">
+                                                    <span>中国</span>
+                                                    <i>CN</i>
+                                                </div>
+                                                <div class="track-return"></div>
+                                                <div class="track-df track-md">
+                                                    <span>美国</span>
+                                                    <i>US</i>
+                                                </div>
+                                            </div>
+                                            <div class="track-date pull-right col-md-6 col-xs-12">
+                                                <p>2018-02-09 03:11 Unloaded from arrival flight CX08408 Feb</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="collapseThree1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree1">
+                                        <div class="panel-body">
+                                            <div class="track-ctn">
+                                                <h5>最新路线明细：</h5>
+                                                <div class="rote active">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-30 19:10:01</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Вручен</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-30 16:33:37</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Выдан на доставку(准备交货)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-29 11:25:24</span>
+                                                    <span>Краснодар(克拉斯诺达尔) , Принят на склад доставки(货运仓库已接受)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:50:22</span>
+                                                    <span>Москва(莫斯科 ) , Возвращен на склад транзита(返回中转仓库)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:49:11</span>
+                                                    <span>Москва(莫斯科 ) , Выдан на отправку в г-транзите(已发往中转城市)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-27 21:49:11</span>
+                                                    <span>Москва(莫斯科 ) , Принят на склад транзита(中转库房已接收)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:54</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Отправлен в г-транзит(在中转城市已发送)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:53</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Сдан перевозчику в г-транзите(中转城市承运人已办理)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-13 14:33:51</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Выдан на отправку в г-транзите(已发往中转城市)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-12 14:59:15</span>
+                                                    <span>Хумень (Бейцзяфэнсини) , Принят на склад транзита(货物进行分拣中)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <s></s>
+                                                    <span>2017-06-12 14:46:50</span>
+                                                    <span>Хумень , Создан(海关报关信息已发送)</span>
+                                                </div>
+                                                <div class="rote">
+                                                    <b></b>
+                                                    <span>2017-06-12 14:46:41</span>
+                                                    <span>Хумень , Создан(已办理入库)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="question">
+                            <p class="dh">没有查询到单号。</p>
+                            <div class="kbox">
+                                <img src="img/box.png" alt="没有查询到单号" title="没有查询到单号"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="ft">
+                <p>@ 2017 快邮速递 版权所有 粤ICP备13022611号-2</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

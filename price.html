@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<!-- 1.1.0 -->
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="keywords" content="快邮，速递，快邮速递">
+    <meta name="description" content="快邮速递是快邮科技旗下新型快递品牌，以“服务大众，畅享速递”为宗旨，为用户提供“方便、快递”的服务体验">
+    <title>快邮速递-价格查询</title>
+    <meta name="author" content="ZouYuan" />
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+
+    <nav class="navbar navbar-fixed-top" >
+        <div class="container">
+            <div class="col-md-12">
+                <nav class="navbar pull-right  hidden-xs" role="navigation">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i></i>
+                                    简体中文
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">English</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-12">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="" class="img-responsive"/>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="track.html">包裹查询</a></li>
+                        <li><a href="channel.html">渠道查询</a></li>
+                        <li class="active"><a href="price.html">价格查询</a></li>
+                        <li><a href="product.html">产品服务</a></li>
+                        <li><a href="news.html">新闻中心</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="login.html">登录/注册</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="topimg">
+        <img src="img/priceimg.jpg" alt="" class="img-responsive"/>
+    </div>
+
+    <div class="about price product">
+        <div class="container">
+            <div class="about-header">
+                <div class="about-breadcrumb pull-left">
+                    当前位置：<a href="index.html">首页</a> >> <a href="price.html">价格查询</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="about-tabs">
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade in active" id="product-service">
+                            <div class="about-title">
+                                <h4>价格查询 / <b>Price Query</b></h4>
+                                <form class="form-inline fi1">
+                                    <div class="form-group">
+                                        <p><span>*</span>物流类型</p>
+                                        <div class="input-group">
+                                            <div class="checkbox">
+                                                <select class="form-control">
+                                                    <option value="">--全部--</option>
+                                                    <option value="国际小包">国际小包</option>
+                                                    <option value="国际快递">国际快递</option>
+                                                    <option value="FBA专线">FBA专线</option>
+                                                    <option value="其它">其它</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <p><span>*</span>目的国家</p>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" style="border-top-right-radius: 4px; border-bottom-right-radius: 4px;" size="20" value="目的地">
+                                            <input type="hidden">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <p><span>*</span>发运国家</p>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" style="border-top-right-radius: 4px; border-bottom-right-radius: 4px;" size="20" value="中国">
+                                            <input type="hidden">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <p><span>*</span>重量（KG）</p>
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="1" value="1" type="text">
+                                        </div>
+                                    </div>
+                                </form>
+                                <form class="form-inline fi2">
+                                    <div class="form-group">
+                                        <p>长（CM）</p>
+                                        <input class="form-control" placeholder="1" type="text" value="1">
+                                    </div>
+                                    <div class="form-group">
+                                        <p>宽（CM）</p>
+                                        <input class="form-control zbk" placeholder="1" type="text" value="1">
+                                    </div>
+                                    <div class="form-group">
+                                        <p>高（CM）</p>
+                                        <input class="form-control" placeholder="1" type="text" value="1">
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="form-control">查询</button>
+                                    </div>
+                                </form>
+                                <div class="prictn">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th>物流服务</th>
+                                                <th>计费重量<br>（kg）</th>
+                                                <th>预计总费用<br>（RMB）</th>
+                                                <th>预计单价<br>（RMB）</th>
+                                                <th>工作日<br>（天）</th>
+                                                <th>备注</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>中快香港e速宝</td>
+                                                <td>1.000</td>
+                                                <td>103.000</td>
+                                                <td>103.000</td>
+                                                <td>7</td>
+                                                <td>中速通货(517)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>中快香港e速宝</td>
+                                                <td>1.000</td>
+                                                <td>103.000</td>
+                                                <td>103.000</td>
+                                                <td>7</td>
+                                                <td>中速通货(517)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>中快香港e速宝</td>
+                                                <td>1.000</td>
+                                                <td>103.000</td>
+                                                <td>103.000</td>
+                                                <td>7</td>
+                                                <td>中速通货(517)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>中快香港e速宝</td>
+                                                <td>1.000</td>
+                                                <td>103.000</td>
+                                                <td>103.000</td>
+                                                <td>7</td>
+                                                <td>中速通货(517)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>中快香港e速宝</td>
+                                                <td>1.000</td>
+                                                <td>103.000</td>
+                                                <td>103.000</td>
+                                                <td>7</td>
+                                                <td>中速通货(517)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>中快香港e速宝</td>
+                                                <td>1.000</td>
+                                                <td>103.000</td>
+                                                <td>103.000</td>
+                                                <td>7</td>
+                                                <td>中速通货(517)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>中快香港e速宝</td>
+                                                <td>1.000</td>
+                                                <td>103.000</td>
+                                                <td>103.000</td>
+                                                <td>7</td>
+                                                <td>中速通货(517)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>中快香港e速宝</td>
+                                                <td>1.000</td>
+                                                <td>103.000</td>
+                                                <td>103.000</td>
+                                                <td>7</td>
+                                                <td>中速通货(517)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>中快香港e速宝</td>
+                                                <td>1.000</td>
+                                                <td>103.000</td>
+                                                <td>103.000</td>
+                                                <td>7</td>
+                                                <td>中速通货(517)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>中快香港e速宝</td>
+                                                <td>1.000</td>
+                                                <td>103.000</td>
+                                                <td>103.000</td>
+                                                <td>7</td>
+                                                <td>中速通货(517)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>中快香港e速宝</td>
+                                                <td>1.000</td>
+                                                <td>103.000</td>
+                                                <td>103.000</td>
+                                                <td>7</td>
+                                                <td>中速通货(517)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>中快香港e速宝</td>
+                                                <td>1.000</td>
+                                                <td>103.000</td>
+                                                <td>103.000</td>
+                                                <td>7</td>
+                                                <td>中速通货(517)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>中快香港e速宝</td>
+                                                <td>1.000</td>
+                                                <td>103.000</td>
+                                                <td>103.000</td>
+                                                <td>7</td>
+                                                <td>中速通货(517)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>中快香港e速宝</td>
+                                                <td>1.000</td>
+                                                <td>103.000</td>
+                                                <td>103.000</td>
+                                                <td>7</td>
+                                                <td>中速通货(517)</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="page">
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination">
+                                                <li>
+                                                    <a href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">«</span>
+                                                    </a>
+                                                </li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li>
+                                                    <a href="#" aria-label="Next">
+                                                        <span aria-hidden="true">»</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <span class="pull-right atd">注：手机端请向左滑动查看更多信息</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+
+    <div class="footer navbar-fixed-bottom">
+        <div class="container">
+            <div class="ft">
+                <p>@ 2017 快邮速递 版权所有 粤ICP备13022611号-2</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
